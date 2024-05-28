@@ -13,7 +13,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const nhanqua = document.getElementById('nhan-qua');
     const danhsach = ['Đây cơ mà' ,'Quà của bé đây','Ủa Không Nhận Quà Hỏo', 'Nhận quà ở đây nè' ,'Bấm nhận đi màa', 'Quà Đây nhaa Anh thề']
-    
+    let dem =0;
     nhanqua.addEventListener('click', function() {
         console.log('Clicked!');
         // Generate random positions within the window
@@ -30,10 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
         let randomIndex = Math.floor(Math.random() * danhsach.length);
         
         let text = danhsach[randomIndex];
-        if(text == 'Quà Đây nhaa Anh thề'){
+        if(dem == 5){
             window.open("https://www.facebook.com/VuongDuc204/", '_blank');
          }
         nhanqua.textContent = text;
+        dem++;
+        
 
     });
 });
